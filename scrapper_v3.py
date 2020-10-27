@@ -49,3 +49,18 @@ if __name__ == '__main__':
     process.start()  # the script will block here until the crawling is finished
 
     print("End parsing")
+
+
+# Keep in mind you can structure response data
+# https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9
+class BooksItem(scrapy.Item):
+    title = scrapy.Field()
+    final_image = scrapy.Field()
+    price = scrapy.Field()
+    stock = scrapy.Field()
+    stars = scrapy.Field()
+    description = scrapy.Field()
+    upc = scrapy.Field()
+    price_excl_tax = scrapy.Field()
+    price_inc_tax = scrapy.Field()
+    tax = scrapy.Field()
