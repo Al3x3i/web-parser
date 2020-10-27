@@ -23,6 +23,10 @@ class BlogSpider(scrapy.Spider):
 
         self.save_to_file(links)
 
+        # Recursive parsing
+        # for next_page in response.css('a.next-posts-link'):
+        #     yield response.follow(next_page, self.parse)
+
     def save_to_file(self, data):
 
         with open("Result.txt", 'w') as filehandle:
